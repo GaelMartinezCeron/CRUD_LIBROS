@@ -6,6 +6,12 @@ Abre Git Bash y escribe:
 bash
 git clone https://github.com/GaelMartinezCeron/CRUD_LIBROS.git
 
+cd CRUD_LIBROS
+
+depues 
+
+git init
+
 PASO 2 - DESCARGAR DB BROWSER FOR SQLITE
 
 Ve a: https://sqlitebrowser.org
@@ -18,13 +24,18 @@ En Git Bash escribe:
 
 bash
 cd java-desktop-app
+
 cd java-biblioteca-crud
+
 PASO 4 - EJECUTAR LA APLICACIÓN
+
 En la misma ventana de Git Bash escribe:
 
 bash
 mvn clean javafx:run
+
 PASO 5 - VER BASE DE DATOS
+
 Abre DB Browser for SQLite
 
 Ve a la carpeta del proyecto
