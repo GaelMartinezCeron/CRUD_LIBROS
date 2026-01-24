@@ -1,15 +1,19 @@
 INSTRUCCIONES PARA EJECUTAR EL PROYECTO
 PASO 1 - DESCARGAR EL PROYECTO
+
 Abre Git Bash y escribe:
 
 bash
 git clone https://github.com/GaelMartinezCeron/CRUD_LIBROS.git
+
 PASO 2 - DESCARGAR DB BROWSER FOR SQLITE
+
 Ve a: https://sqlitebrowser.org
 
 Descarga e instala DB Browser for SQLite
 
 PASO 3 - ACCEDER A LA CARPETA
+
 En Git Bash escribe:
 
 bash
