@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.biblioteca.controlador.LibroControlador"
+            prefHeight="750.0" prefWidth="1100.0"
+            style="-fx-background-color: linear-gradient(to bottom right, #f8fafc, #e2e8f0);">
+
+    <!-- Encabezado con gradiente elegante -->
+    <top>
+        <VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #1e3a5f, #2d5a87); -fx-padding: 25 20 25 20;">
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.3)" offsetY="4" radius="10"/>
+            </effect>
+            <Label text="Sistema de Gestion de Biblioteca" textFill="WHITE">
+                <font>
+                    <Font name="Segoe UI Bold" size="28.0"/>
+                </font>
+            </Label>
+            <Label text="Administracion de Libros" style="-fx-text-fill: #94a3b8;">
+                <font>
+                    <Font name="Segoe UI" size="14.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="5.0"/>
+                </VBox.margin>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Panel Principal -->
+    <center>
+        <VBox spacing="25.0">
+            <padding>
+                <Insets bottom="25.0" left="30.0" right="30.0" top="25.0"/>
+            </padding>
+
+            <!-- Formulario con estilo de tarjeta -->
+            <VBox style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e2e8f0; -fx-border-width: 1;">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.08)" offsetY="4" radius="15"/>
+                </effect>
+                <padding>
+                    <Insets bottom="25.0" left="30.0" right="30.0" top="25.0"/>
+                </padding>
+
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <VBox.margin>
+                        <Insets bottom="20.0"/>
+                    </VBox.margin>
+                    <Label text="Datos del Libro" style="-fx-text-fill: #1e3a5f; -fx-font-size: 18;">
+                        <font>
+                            <Font name="Segoe UI Bold" size="18.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+
+                <GridPane hgap="20.0" vgap="18.0">
+                    <!-- Fila 1 -->
+                    <Label text="Nombre del Libro:" style="-fx-text-fill: #475569; -fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtNombre" promptText="Ingrese el nombre del libro" prefWidth="280.0" prefHeight="38.0"
+                               style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 12;"
+                               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <Label text="Nombre del Autor:" style="-fx-text-fill: #475569; -fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtAutor" promptText="Ingrese el nombre del autor" prefWidth="280.0" prefHeight="38.0"
+                               style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 12;"
+                               GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                    <!-- Fila 2 -->
+                    <Label text="Fecha de Lanzamiento:" style="-fx-text-fill: #475569; -fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <DatePicker fx:id="dpFechaLanzamiento" promptText="Seleccione fecha" prefWidth="280.0" prefHeight="38.0"
+                                style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8;"
+                                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <Label text="Editorial:" style="-fx-text-fill: #475569; -fx-font-weight: bold;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <ComboBox fx:id="cmbEditorial" promptText="Seleccione editorial" prefWidth="280.0" prefHeight="38.0"
+                              style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8;"
+                              GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                    <!-- Fila 3 -->
+                    <Label text="Costo ($):" style="-fx-text-fill: #475569; -fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtCosto" promptText="Ej: 299.99" prefWidth="280.0" prefHeight="38.0"
+                               style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 12;"
+                               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                </GridPane>
+
+                <!-- Botones de Accion con estilo moderno -->
+                <HBox spacing="15.0" alignment="CENTER">
+                    <VBox.margin>
+                        <Insets top="25.0"/>
+                    </VBox.margin>
+
+                    <Button text="Registrar" onAction="#registrar" prefWidth="130.0" prefHeight="42.0"
+                            style="-fx-background-color: linear-gradient(to bottom, #10b981, #059669); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13; -fx-background-radius: 10; -fx-cursor: hand;">
+                        <effect>
+                            <DropShadow color="rgba(16,185,129,0.4)" offsetY="3" radius="8"/>
+                        </effect>
+                    </Button>
+
+                    <Button text="Modificar" onAction="#modificar" prefWidth="130.0" prefHeight="42.0"
+                            style="-fx-background-color: linear-gradient(to bottom, #f59e0b, #d97706); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13; -fx-background-radius: 10; -fx-cursor: hand;">
+                        <effect>
+                            <DropShadow color="rgba(245,158,11,0.4)" offsetY="3" radius="8"/>
+                        </effect>
+                    </Button>
+
+                    <Button text="Eliminar" onAction="#eliminar" prefWidth="130.0" prefHeight="42.0"
+                            style="-fx-background-color: linear-gradient(to bottom, #ef4444, #dc2626); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13; -fx-background-radius: 10; -fx-cursor: hand;">
+                        <effect>
+                            <DropShadow color="rgba(239,68,68,0.4)" offsetY="3" radius="8"/>
+                        </effect>
+                    </Button>
+
+                    <Button text="Limpiar" onAction="#limpiarFormulario" prefWidth="130.0" prefHeight="42.0"
+                            style="-fx-background-color: linear-gradient(to bottom, #64748b, #475569); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13; -fx-background-radius: 10; -fx-cursor: hand;">
+                        <effect>
+                            <DropShadow color="rgba(100,116,139,0.4)" offsetY="3" radius="8"/>
+                        </effect>
+                    </Button>
+                </HBox>
+            </VBox>
+
+            <!-- Seccion de Busqueda y Tabla -->
+            <VBox VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e2e8f0; -fx-border-width: 1;">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.08)" offsetY="4" radius="15"/>
+                </effect>
+                <padding>
+                    <Insets bottom="25.0" left="30.0" right="30.0" top="25.0"/>
+                </padding>
+
+                <!-- Barra de Busqueda -->
+                <HBox spacing="15.0" alignment="CENTER_LEFT">
+                    <VBox.margin>
+                        <Insets bottom="20.0"/>
+                    </VBox.margin>
+
+                    <Label text="Consultar Libros" style="-fx-text-fill: #1e3a5f;">
+                        <font>
+                            <Font name="Segoe UI Bold" size="18.0"/>
+                        </font>
+                    </Label>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <TextField fx:id="txtBuscar" promptText="Buscar por nombre o autor..." prefWidth="320.0" prefHeight="38.0"
+                               style="-fx-background-color: #f8fafc; -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 8 15;"/>
+
+                    <Button text="Buscar" onAction="#buscar" prefWidth="110.0" prefHeight="38.0"
+                            style="-fx-background-color: linear-gradient(to bottom, #3b82f6, #2563eb); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13; -fx-background-radius: 10; -fx-cursor: hand;">
+                        <effect>
+                            <DropShadow color="rgba(59,130,246,0.4)" offsetY="3" radius="8"/>
+                        </effect>
+                    </Button>
+                </HBox>
+
+                <!-- Tabla de Libros con estilo mejorado -->
+                <TableView fx:id="tablaLibros" VBox.vgrow="ALWAYS"
+                           style="-fx-background-color: transparent; -fx-border-color: #e2e8f0; -fx-border-radius: 10; -fx-background-radius: 10;">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="60" style="-fx-alignment: CENTER;"/>
+                        <TableColumn fx:id="colNombre" text="Nombre del Libro" prefWidth="220"/>
+                        <TableColumn fx:id="colAutor" text="Autor" prefWidth="170"/>
+                        <TableColumn fx:id="colFecha" text="Fecha Lanzamiento" prefWidth="140" style="-fx-alignment: CENTER;"/>
+                        <TableColumn fx:id="colEditorial" text="Editorial" prefWidth="160"/>
+                        <TableColumn fx:id="colCosto" text="Costo" prefWidth="100" style="-fx-alignment: CENTER-RIGHT;"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="No hay libros registrados. Agregue el primero." style="-fx-text-fill: #94a3b8; -fx-font-size: 14;"/>
+                    </placeholder>
+                </TableView>
+            </VBox>
+        </VBox>
+    </center>
+
+    <!-- Pie de pagina elegante -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #1e3a5f; -fx-padding: 15;">
+            <Label text="Sistema de Biblioteca - CRUD con JavaFX y SQLite" style="-fx-text-fill: #94a3b8; -fx-font-size: 12;">
+                <font>
+                    <Font name="Segoe UI" size="12.0"/>
+                </font>
+            </Label>
+        </HBox>
+    </bottom>
+</BorderPane>
