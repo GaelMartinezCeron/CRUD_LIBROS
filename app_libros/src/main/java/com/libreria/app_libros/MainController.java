@@ -1,14 +1,13 @@
 package com.libreria.app_libros;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
+@Controller
 public class MainController {
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("¡Sistema CRUD de Libros iniciado correctamente!");
+    @GetMapping("/")
+    public String home() {
+        return "index";  // Esto busca src/main/resources/templates/index.html
     }
 }
