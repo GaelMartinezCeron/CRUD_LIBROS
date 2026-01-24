@@ -43,4 +43,4 @@ Ve a la carpeta del proyecto
 
 Abre el archivo biblioteca.db
 
-Creado por: Gael Martinez y Edgar Gamiño  Ing.Sistemas Computacionales
+### Creado por: Gael Martinez y Edgar Gamiño  Ing.Sistemas Computacionales
