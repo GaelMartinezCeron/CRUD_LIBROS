@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.libreria.app_libros.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="📚 SISTEMA DE GESTIÓN DE LIBROS" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Label text="CRUD Completo con JavaFX y SQLite" style="-fx-font-size: 16px; -fx-text-fill: #7f8c8d;"/>
+
+    <Separator/>
+
+    <GridPane hgap="15" vgap="15" style="-fx-background-color: white; -fx-padding: 20; -fx-border-color: #ddd; -fx-border-radius: 5;">
+        <Label text="🔧 Tecnologías:" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label text="Java 17, JavaFX, SQLite, Maven" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="📋 Funcionalidades:" style="-fx-font-weight: bold;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label text="Create, Read, Update, Delete (CRUD)" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="🗂️ Campos:" style="-fx-font-weight: bold;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label text="Libro, Autor, Fecha, Editorial, Costo" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Iniciar Sistema" onAction="#onHelloButtonClick" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30;"/>
+
+    <Label fx:id="welcomeText" style="-fx-font-size: 14px; -fx-text-fill: #2980b9;"/>
+
+    <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #f8f9fa; -fx-border-radius: 5;">
+        <Label text="🚀 Próximos pasos:" style="-fx-font-weight: bold;"/>
+        <Label text="1. Crear modelo Libro.java"/>
+        <Label text="2. Implementar Database.java (SQLite)"/>
+        <Label text="3. Diseñar formulario CRUD completo"/>
+        <Label text="4. Conectar interfaz con base de datos"/>
+    </VBox>
+
+</VBox>
