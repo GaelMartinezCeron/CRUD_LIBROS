@@ -1,6 +1,6 @@
-INSTRUCCIONES PARA EJECUTAR EL PROYECTO
+# INSTRUCCIONES PARA EJECUTAR EL PROYECTO
 
-PASO 1 - DESCARGAR EL PROYECTO
+ ## PASO 1 - DESCARGAR EL PROYECTO
 
 Abre Git Bash y escribe:
 
@@ -13,13 +13,13 @@ depues
 
 git init
 
-PASO 2 - DESCARGAR DB BROWSER FOR SQLITE
+## PASO 2 - DESCARGAR DB BROWSER FOR SQLITE
 
 Ve a: https://sqlitebrowser.org
 
 Descarga e instala DB Browser for SQLite
 
-PASO 3 - ACCEDER A LA CARPETA
+## PASO 3 - ACCEDER A LA CARPETA
 
 En Git Bash escribe:
 
@@ -28,14 +28,14 @@ cd java-desktop-app
 
 cd java-biblioteca-crud
 
-PASO 4 - EJECUTAR LA APLICACIÓN
+## PASO 4 - EJECUTAR LA APLICACIÓN
 
 En la misma ventana de Git Bash escribe:
 
 bash
 mvn clean javafx:run
 
-PASO 5 - VER BASE DE DATOS
+## PASO 5 - VER BASE DE DATOS
 
 Abre DB Browser for SQLite
 
