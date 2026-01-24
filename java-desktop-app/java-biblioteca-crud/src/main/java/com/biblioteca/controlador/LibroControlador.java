@@ -103,9 +103,6 @@ public class LibroControlador implements Initializable {
         tablaLibros.setItems(listaLibros);
     }
 
-    /**
-     * Carga los datos del libro seleccionado en el formulario
-     */
     private void cargarDatosEnFormulario(Libro libro) {
         txtNombre.setText(libro.getNombre());
         txtAutor.setText(libro.getAutor());

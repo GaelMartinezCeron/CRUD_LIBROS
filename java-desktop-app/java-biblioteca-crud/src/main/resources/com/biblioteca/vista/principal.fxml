@@ -92,7 +92,7 @@
                                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                 </GridPane>
 
-                <!-- Botones de Accion con estilo moderno -->
+
                 <HBox spacing="15.0" alignment="CENTER">
                     <VBox.margin>
                         <Insets top="25.0"/>
@@ -128,7 +128,7 @@
                 </HBox>
             </VBox>
 
-            <!-- Seccion de Busqueda y Tabla -->
+
             <VBox VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e2e8f0; -fx-border-width: 1;">
                 <effect>
                     <DropShadow color="rgba(0,0,0,0.08)" offsetY="4" radius="15"/>
@@ -184,7 +184,7 @@
     <!-- Pie de pagina elegante -->
     <bottom>
         <HBox alignment="CENTER" style="-fx-background-color: #1e3a5f; -fx-padding: 15;">
-            <Label text="Sistema de Biblioteca - CRUD con JavaFX y SQLite" style="-fx-text-fill: #94a3b8; -fx-font-size: 12;">
+            <Label text="ISC sistema de bibloteca" style="-fx-text-fill: #94a3b8; -fx-font-size: 12;">
                 <font>
                     <Font name="Segoe UI" size="12.0"/>
                 </font>

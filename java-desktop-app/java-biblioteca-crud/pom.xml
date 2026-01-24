@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>Biblioteca CRUD</name>
-    <description>Sistema de gestión de libros con JavaFX y SQLite</description>
+    <description>Sistema de gestión de libros</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
